@@ -1,0 +1,15 @@
+.progressbar {
+  width: 100%;
+  height: 16px;
+  border-radius: 16px;
+  background-color: white;
+
+  .progress {
+    width: var(--percent);
+    height: 100%;
+    background-color: var(--theme-bright);
+    border-radius: 16px;
+
+    transition: width 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+}

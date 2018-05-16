@@ -1,0 +1,54 @@
+.inputs {
+  display: flex;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  .input {
+    margin-right: 16px;
+    padding: 0;
+
+    background-color: var(--theme-dark);
+    border: none;
+    color: white;
+    font-size: 48px;
+
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    position: relative;
+
+    outline: none;
+
+    &:hover::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 16px;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .inputs {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+
+    .input {
+      margin: 0;
+      &:last-child {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        justify-self: center;
+      }
+    }
+  }
+}
